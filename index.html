@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Conference Ticket Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main id="mainContent">
+      <h4 style="text-align: center;">
+        <img src="headimage.jpg" height="30px" width="30px"> Coding Conf
+      </h4>
+      <h1 style="text-align: center;">Your Journey to Coding Conf 2025 Starts Here!</h1>
+      <p style="text-align: center;">Secure your spot at next year's biggest coding Conference.</p>
+      <form id="ticketForm" novalidate>
+        <div style="text-align: center;">
+          <label>Upload Avatar</label>
+          <br>
+          <table style="margin: auto; border: 2px dotted; text-align: center; padding: 20px;">
+            <tr>
+              <th>
+                <label style="cursor: pointer; display: inline-block;">
+                  <img src="cloudupload.png" alt="Upload Avatar" width="60" height="60">
+                  <br>
+                  <span style="font-size: 14px; color:white;">Drag and drop or Click to Upload</span>
+                  <input type="file" id="file-upload" name="avatar" accept="image/png, image/jpeg" required style="display: none;" onchange="updateFileName()">
+                </label>
+                <p id="fileNameDisplay" style="color:white; font-size:14px; margin-top:10px;"></p>
+              </th>
+            </tr>
+          </table>
+          
+          <span id="avatarError" class="error-message" style="color: red; display: block; margin-top: 5px;"></span>
+
+          <p>Upload your photo (JPG or PNG, max size: 500KB)</p>
+          <br>
+
+          <label>Full Name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Enter your FullName" required>
+          
+          <span id="fullNameError" class="error-message" style="color: red; display: block; margin-top: 5px;"></span>
+          <br>
+
+          <br>
+          <label>Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          
+          <span id="emailError" class="error-message" style="color: red; display: block; margin-top: 5px;"></span>
+          <br>
+
+          <br>
+          <label>GitHub Username</label>
+          <input type="text" id="username" name="username" placeholder="@yourusername">
+          <br>
+
+          <br>
+          <button type="submit" name="Generate My Ticket" height="100px" width="300px">Generate My Ticket</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
+
+
